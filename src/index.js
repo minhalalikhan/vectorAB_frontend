@@ -27,7 +27,6 @@ root.render(
         <Route path='/RegistrationTwo' element={<RegistrationTwo />} />
         <Route path='/RegistrationThree' element={<RegistrationThree />} />
         <Route path='/RegistrationFour' element={<RegistrationFour />} />
-
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
