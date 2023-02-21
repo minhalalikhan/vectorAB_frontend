@@ -2,10 +2,10 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import validation from './Validation';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
-function Admin_Login() {
+function AdminLogin() {
 
   // Values Updating
   const [values, setValues] = useState({
@@ -62,7 +62,8 @@ function Admin_Login() {
       </form>
       <div className="Admin">
             <button className='Admin'>
-              User Login
+              {/*Link To New Pages*/}
+              <Link to="/">User Login</Link>
             </button>
             <button className='Admin'>
               Sign Up
@@ -72,4 +73,4 @@ function Admin_Login() {
   );
 }
 
-export default Admin_Login;
+export default AdminLogin;

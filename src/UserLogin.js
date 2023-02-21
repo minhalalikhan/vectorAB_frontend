@@ -2,14 +2,12 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import validation from './Validation';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 
 
 function UserLogin() {
 
-  function AdminClick() {
-    
-  }
 
   // Values Updating
   const [values, setValues] = useState({
@@ -65,8 +63,8 @@ function UserLogin() {
           </div>
       </form>
       <div className="Admin">
-            <button className='Admin' onClick={AdminClick}>
-              Admin Login
+            <button className='Admin'>
+              <Link to="/AdminLogin">Admin Login</Link>
             </button>
             <button className='Admin'>
               Sign Up

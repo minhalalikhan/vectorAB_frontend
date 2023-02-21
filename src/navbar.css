@@ -10,7 +10,7 @@
 .logo{
     display: grid;
     padding-left: 50px;
-    color: rgb(43, 43, 210);
+    color: rgb(94, 188, 255);
     justify-content: start;
     align-items: center;
 }
@@ -33,4 +33,9 @@
 .About{
     padding-top: 50px;
     color: white;
+}
+
+a{
+    color: rgb(94, 188, 255);
+    text-decoration: none;
 }

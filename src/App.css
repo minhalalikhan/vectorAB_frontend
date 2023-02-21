@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(43, 43, 210);
+  background-color: white;
   font-family: "Raleway", sans-serif;
 }
 
@@ -17,7 +17,7 @@ transform: translate(-50%,-50%);
 width: 380px;
 padding: 20px 30px;
 background: white;
-box-shadow: 2px 2px 5px 5px rgba(0,0,0,0,15);
+box-shadow: 5px 5px 20px rgb(0,0,0);
 border-radius: 10px;
 }
 

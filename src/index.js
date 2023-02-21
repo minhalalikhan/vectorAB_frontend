@@ -5,6 +5,7 @@ import App from './UserLogin';
 import Navbar from './Navbar';
 import About from './About';
 import Contact from './Contact';
+import AdminLogin from './AdminLogin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/AdminLogin' element={<AdminLogin />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
