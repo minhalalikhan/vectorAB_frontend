@@ -63,10 +63,10 @@ function AdminLogin() {
       <div className="Admin">
             <button className='Admin'>
               {/*Link To New Pages*/}
-              <Link to="/">User Login</Link>
+              <Link style={{color:'white'}} to="/">User Login</Link>
             </button>
             <button className='Admin'>
-              Sign Up
+              <Link style={{color:'white'}} to="/RegistrationOne">Sign Up</Link>
             </button>
       </div>      
     </div>

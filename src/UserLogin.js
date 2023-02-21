@@ -64,10 +64,10 @@ function UserLogin() {
       </form>
       <div className="Admin">
             <button className='Admin'>
-              <Link to="/AdminLogin">Admin Login</Link>
+              <Link style={{color:'white'}} to="/AdminLogin">Admin Login</Link>
             </button>
             <button className='Admin'>
-              Sign Up
+              <Link style={{color:'white'}} to="/RegistrationOne">Registration</Link>
             </button>
       </div> 
     </div>
