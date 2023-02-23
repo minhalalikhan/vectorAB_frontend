@@ -67,7 +67,7 @@ function UserLogin() {
               <Link style={{color:'white'}} to="/AdminLogin">Admin Login</Link>
             </button>
             <button className='Admin'>
-              <Link style={{color:'white'}} to="/RegistrationOne">Registration</Link>
+              <Link style={{color:'white'}} to="/Registration">Registration</Link>
             </button>
       </div> 
     </div>

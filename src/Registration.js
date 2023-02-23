@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 
 
-function UserLogin() {
+function Registration() {
 
   const [firstName, setfirstName] = useState("");
   const [surName, setsurName] = useState("");
@@ -11,13 +11,13 @@ function UserLogin() {
   
 
   return (
-    <div className="App">
+    <div className="Ap">
       <form>
         <div class="form">
           <h2>
             Registration
           </h2>
-          <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '50px'  }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="Username">
               First Name
             </label>
@@ -29,7 +29,7 @@ function UserLogin() {
                   value={firstName}
                   onChange={(e) => setfirstName(e.target.value)}/>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%', paddingLeft: '50px'  }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingLeft: '20px'  }}>
             <label for="Surname">
               Last Name
             </label>
@@ -41,7 +41,7 @@ function UserLogin() {
                   value={surName}
                   onChange={(e) => setsurName(e.target.value)}/>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%' }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="Age">
               Age
             </label>
@@ -53,7 +53,7 @@ function UserLogin() {
                   value={age} 
                   onChange={(e) => setage(e.target.value)}/>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%' }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingLeft: '20px' }}>
             <label for="Gender">
               Gender
             </label>
@@ -65,7 +65,7 @@ function UserLogin() {
               <option value="Rather Not To Say">Rather Not To Say</option>
             </select>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%' }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="Address">
               Address
             </label>
@@ -73,7 +73,7 @@ function UserLogin() {
                   id="Address" placeholder='Enter Address' 
                   name="name"/>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%' }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingLeft: '20px' }}>
             <label for="City">
               City
             </label>
@@ -82,7 +82,7 @@ function UserLogin() {
                   placeholder='Enter Your City' 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'left', width: '50%' }}>
+          <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="State">
               State
             </label>
@@ -91,7 +91,7 @@ function UserLogin() {
                   placeholder='Enter Your State' 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px' }}>
             <label for="Username">
               School Name
             </label>
@@ -100,7 +100,7 @@ function UserLogin() {
                   placeholder="Enter Your School's Name" 
                   name="name"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px' }}>
             <label for="School's Address">
               School's Address
             </label>
@@ -109,7 +109,7 @@ function UserLogin() {
                   placeholder="Enter Your School's Address" 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px' }}>
             <label for="College Name">
               College Name
             </label>
@@ -118,7 +118,7 @@ function UserLogin() {
                   placeholder="Enter Your College's Name" 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px'  }}>
             <label for="Age">
               College's Address
             </label>
@@ -127,7 +127,7 @@ function UserLogin() {
                   placeholder="Enter Your College's Address" 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px' }}>
             <label for="Username">
               Phone Number
             </label>
@@ -136,7 +136,7 @@ function UserLogin() {
                   placeholder='Enter Your Phone Number' 
                   name="name"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px'  }}>
             <label for="Age">
               Email
             </label>
@@ -145,7 +145,7 @@ function UserLogin() {
                   placeholder='Enter Your Email' 
                   name="password"/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%' }}>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px'  }}>
             <label for="Age">
               OTP
             </label>
@@ -160,4 +160,4 @@ function UserLogin() {
   );
 }
 
-export default UserLogin;
+export default Registration;

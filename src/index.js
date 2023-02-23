@@ -6,10 +6,8 @@ import Navbar from './Navbar';
 import About from './About';
 import Contact from './Contact';
 import AdminLogin from './AdminLogin';
-import RegistrationOne from './RegistrationOne';
-import RegistrationTwo from './RegistrationTwo';
-import RegistrationThree from './RegistrationThree';
-import RegistrationFour from './RegistrationFour';
+import Registration from './Registration';
+
 
 
 
@@ -23,10 +21,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path='/AdminLogin' element={<AdminLogin />} />
-        <Route path='/RegistrationOne' element={<RegistrationOne />} />
-        <Route path='/RegistrationTwo' element={<RegistrationTwo />} />
-        <Route path='/RegistrationThree' element={<RegistrationThree />} />
-        <Route path='/RegistrationFour' element={<RegistrationFour />} />
+        <Route path='/Registration' element={<Registration />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
