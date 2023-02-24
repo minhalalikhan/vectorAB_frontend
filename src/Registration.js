@@ -1,18 +1,56 @@
 import './Registration.css';
 import React from 'react';
 import { useState } from 'react';
-
+//import { Link } from "react-router-dom";
 
 function Registration() {
 
   const [firstName, setfirstName] = useState("");
   const [surName, setsurName] = useState("");
   const [age, setage] = useState("");
+  const [gender, setgender] = useState("");
+  const [address, setaddress] = useState("");
+  const [city, setcity] = useState("");
+  const [state, setstate] = useState("");
+  const [schoolname, setschoolname] = useState("");
+  const [schooladdress, setschooladdress] = useState("");
+  const [collegename, setcollegename] = useState("");
+  const [collegeaddress, setcollegeaddress] = useState("");
+  const [phonenumber, setphonenumber] = useState("");
+  const [email, setemail] = useState("");
+  const [otp, setotp] = useState("");
+
+
+  const [allEntry, setallEntry] = useState("");
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    const newEntry = {
+      firstName:firstName,
+      surName:surName,
+      age:age,
+      gender:gender,
+      address:address,
+      city:city,
+      state:state,
+      schoolname:schoolname,
+      schooladdress:schooladdress,
+      collegename:collegename,
+      collegeaddress:collegeaddress,
+      phonenumber:phonenumber,
+      email:email,
+      otp:otp
+    };
+
+      setallEntry(...allEntry,newEntry);
+      console.log(allEntry);
+  }
   
 
   return (
     <div className="Ap">
-      <form>
+      <form action='' onSubmit={submitForm}>
         <div class="form">
           <h2>
             Registration
@@ -46,9 +84,9 @@ function Registration() {
               Age
             </label>
             <input type="text" 
-                  id="Age" 
-                  placeholder='Enter Age' 
-                  name="password" 
+                  id="age" 
+                  placeholder='Enter Your Age' 
+                  name="age" 
                   autoComplete='off' 
                   value={age} 
                   onChange={(e) => setage(e.target.value)}/>
@@ -58,20 +96,25 @@ function Registration() {
               Gender
             </label>
             <br></br>
-            <select>
-              <option value="None">None</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Rather Not To Say">Rather Not To Say</option>
-            </select>
+            <input type="text" 
+                  id="gender" 
+                  placeholder='Enter Your Gender' 
+                  name="gender" 
+                  autoComplete='off' 
+                  value={gender} 
+                  onChange={(e) => setgender(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="Address">
               Address
             </label>
             <input type="text" 
-                  id="Address" placeholder='Enter Address' 
-                  name="name"/>
+                  id="address" 
+                  placeholder='Enter Address' 
+                  name='address'
+                  autoComplete='off'
+                  value={address}  
+                  onChange={(e) => setaddress(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'left', width: '50%', paddingLeft: '20px' }}>
             <label for="City">
@@ -80,7 +123,10 @@ function Registration() {
             <input type="text" 
                   id="City" 
                   placeholder='Enter Your City' 
-                  name="password"/>
+                  name='city'
+                  autoComplete='off'
+                  value={city}
+                  onChange={(e) => setcity(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'left', width: '50%', paddingRight: '20px'  }}>
             <label for="State">
@@ -89,16 +135,22 @@ function Registration() {
             <input type="text" 
                   id="State" 
                   placeholder='Enter Your State' 
-                  name="password"/>
+                  name="state"
+                  autoComplete='off'
+                  value={state}
+                  onChange={(e) => setstate(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px' }}>
             <label for="Username">
               School Name
             </label>
             <input type="text" 
-                  id="Username" 
-                  placeholder="Enter Your School's Name" 
-                  name="name"/>
+                  id="SchoolName" 
+                  placeholder="Enter Your School's Name"
+                  name="SchoolName"
+                  autoComplete='off'
+                  value={schoolname}
+                  onChange={(e) => setschoolname(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px' }}>
             <label for="School's Address">
@@ -107,7 +159,10 @@ function Registration() {
             <input type="text" 
                   id="School's Address" 
                   placeholder="Enter Your School's Address" 
-                  name="password"/>
+                  name="schooladdress"
+                  autoComplete='off'
+                  value={schooladdress}
+                  onChange={(e) => setschooladdress(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px' }}>
             <label for="College Name">
@@ -116,47 +171,66 @@ function Registration() {
             <input type="text" 
                   id="College Name" 
                   placeholder="Enter Your College's Name" 
-                  name="password"/>
+                  name="collegename"
+                  autoComplete='off'
+                  value={collegename}
+                  onChange={(e) => setcollegename(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px'  }}>
-            <label for="Age">
+            <label for="College Address">
               College's Address
             </label>
             <input type="text" 
-                  id="Password" 
+                  id="collegeaddress" 
                   placeholder="Enter Your College's Address" 
-                  name="password"/>
+                  name="collegeaddress"
+                  autoComplete='off'
+                  value={collegeaddress}
+                  onChange={(e) => setcollegeaddress(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px' }}>
-            <label for="Username">
+            <label for="PhoneNumber">
               Phone Number
             </label>
             <input type="text" 
-                  id="Username" 
+                  id="phonenumber" 
                   placeholder='Enter Your Phone Number' 
-                  name="name"/>
+                  name="phonenumber"
+                  autoComplete='off'
+                  value={phonenumber}
+                  onChange={(e) => setphonenumber(e.target.value)}/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px'  }}>
-            <label for="Age">
+            <label for="otp">
+              OTP
+            </label>
+            <input type="text" 
+                  id="otp" 
+                  placeholder="Enter Your OTP(Email's)" 
+                  name="otp"
+                  autoComplete='off'
+                  value={otp}
+                  onChange={(e) => setotp(e.target.value)}/>
+          </div>
+          <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px'  }}>
+            <label for="email">
               Email
             </label>
             <input type="text" 
-                  id="Password" 
-                  placeholder='Enter Your Email' 
-                  name="password"/>
+                  id="email" 
+                  placeholder="Enter Your Email" 
+                  name="email"
+                  autoComplete='off'
+                  value={email}
+                  onChange={(e) => setemail(e.target.value)}/>
           </div>
-          <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px'  }}>
-            <label for="Age">
-              OTP
-            </label>
-            <input type="password" 
-                  id="Password" 
-                  placeholder="Enter Your OTP(Email's)" 
-                  name="password"/>
-          </div>
-          </div>
+        </div>
+        <div>
+        <button className='Submit'>Submit</button>
+        </div>
       </form>
-      </div>
+
+    </div>
   );
 }
 
