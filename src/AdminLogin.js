@@ -28,7 +28,7 @@ function AdminLogin() {
     const myErrors = validation(values);
     setError(myErrors);
     if(!myErrors.name && !myErrors.password) {
-      history("/hello");
+      history("/Hello");
     }
   }
 

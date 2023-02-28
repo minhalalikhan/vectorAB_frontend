@@ -203,6 +203,7 @@ function Registration() {
           <div class="form-element" style={{ float: 'right', width: '50%', paddingLeft: '20px'  }}>
             <label for="otp">
               OTP
+              <span style={{color: 'red' }}>*</span>
             </label>
             <input type="text" 
                   id="otp" 
@@ -210,11 +211,13 @@ function Registration() {
                   name="otp"
                   autoComplete='off'
                   value={otp}
-                  onChange={(e) => setotp(e.target.value)}/>
+                  onChange={(e) => setotp(e.target.value)}
+                  required/>
           </div>
           <div class="form-element" style={{ float: 'right', width: '50%', paddingRight: '20px'  }}>
             <label for="email">
               Email
+              <span style={{color: 'red' }}>*</span>
             </label>
             <input type="text" 
                   id="email" 
@@ -222,7 +225,8 @@ function Registration() {
                   name="email"
                   autoComplete='off'
                   value={email}
-                  onChange={(e) => setemail(e.target.value)}/>
+                  onChange={(e) => setemail(e.target.value)}
+                  required/>
           </div>
         </div>
         <div>

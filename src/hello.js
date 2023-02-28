@@ -1,4 +1,12 @@
 import React from 'react';
-export const Home = () => {
-    return <h1>Hello World</h1>;
-}
+const Hello = () => {
+   
+ return (
+    <>
+    <h1 style={{color:"green"}}> 
+        This is a Hello Page.</h1>
+  </>
+  )
+};
+  
+export default Hello;

@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import AdminLogin from './AdminLogin';
 import Registration from './Registration';
+import Hello from './Hello';
 
 
 
@@ -22,6 +23,7 @@ root.render(
         <Route path="/contact" element={<Contact />} />
         <Route path='/AdminLogin' element={<AdminLogin />} />
         <Route path='/Registration' element={<Registration />} />
+        <Route path='/Hello' element={<Hello />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
