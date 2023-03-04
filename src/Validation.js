@@ -1,7 +1,7 @@
 const Validation = (values) =>{
     let error = {}
 
-    let username_regex = /^[A-Za-z0-9]+$/
+    let username_regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
     let password_regex = /(?=.*\d)(?=.*[A-Z])^[^ ]+$/
 
     if (!username_regex.test(values.name)) {

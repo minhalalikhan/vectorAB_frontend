@@ -79,8 +79,7 @@ function UserLogin() {
           </div>
           <div class="form-element">
             <button
-              disabled={(values.name.length > 2 && values.password.length > 2) ? false : true}
-
+              // disabled={(values.name.length > 2 && values.password.length > 2) ? false : true}
             >
               Login
             </button>
