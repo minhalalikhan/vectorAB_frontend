@@ -5,10 +5,10 @@ const Validation = (values) =>{
     let password_regex = /(?=.*\d)(?=.*[A-Z])^[^ ]+$/
 
     if (!username_regex.test(values.name)) {
-        error.name="No special characters allowed"
+        error.name="Invalid Email Format"
     } 
     if (!values.name){
-        error.name="Name Required"
+        error.name="Email Required"
     } 
     if(!password_regex.test(values.password)) {
         error.password="Must contain a number and capital letter"

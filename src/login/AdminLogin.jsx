@@ -1,7 +1,7 @@
 import '../App.css'
 import React from 'react';
 import { useState } from 'react';
-import validation from '../Validation';
+import validation from '../util_functions/Validation';
 import { Link, useNavigate } from "react-router-dom";
 
 
