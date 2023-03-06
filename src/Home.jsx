@@ -3,8 +3,7 @@ const Home = () => {
 
   return (
     <>
-      <h1 style={{ color: "green" }}>
-        This is a Home Page.</h1>
+
     </>
   )
 };
