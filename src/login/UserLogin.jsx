@@ -1,7 +1,7 @@
 import '../App.css'
 import React from 'react';
 import { useState } from 'react';
-import validation from '../Validation';
+import validation from '../util_functions/Validation';
 import { useNavigate, Link } from "react-router-dom";
 
 import axios from 'axios';
@@ -63,10 +63,10 @@ function UserLogin({ setLoginStatus }) {
       <form onSubmit={handleSubmit}>
         <div class="form">
           <h2>
-            User Login </h2>
+            Student Login </h2>
           <div class="form-element">
             <label for="Username">
-              Username
+              Email
             </label>
             <input type="text" id="Username" placeholder='Enter Username' value={values.name} name="name" onChange={handleChange} />
             {errors.name && <p className='error_msg'>{errors.name}</p>}
@@ -80,8 +80,7 @@ function UserLogin({ setLoginStatus }) {
           </div>
           <div class="form-element">
             <button
-              disabled={(values.name.length > 2 && values.password.length > 2) ? false : true}
-
+              // disabled={(values.name.length > 2 && values.password.length > 2) ? false : true}
             >
               Login
             </button>
