@@ -1,12 +1,12 @@
 import React from 'react';
-const Hello = () => {
+const Home = () => {
 
   return (
     <>
       <h1 style={{ color: "green" }}>
-        This is a Hello Page.</h1>
+        This is a Home Page.</h1>
     </>
   )
 };
 
-export default Hello;
+export default Home;

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 
 
-function UserLogin() {
+function UserLogin({ setLoginStatus }) {
 
 
   // Values Updating
@@ -50,7 +50,8 @@ function UserLogin() {
       if (login_data.status === 200) {
         // login successsful
 
-        history("/Hello");
+        setLoginStatus(1)
+        history("/Home");
       }
       else
         setLoginError(true)
