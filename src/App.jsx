@@ -1,20 +1,21 @@
-import React from 'react';
-import About from './About';
-import Contact from './Contact';
+import React, { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+
+import ProtectedRoute from './components/ProtectedRoute';
+
 import AdminLogin from './login/AdminLogin';
 import UserLogin from './login/UserLogin';
 import SignUp from './login/SignUp';
 import ForgotPass from './login/ForgotPass';
-import { Routes, Route } from "react-router-dom";
+
+import Exam from './Exam';
+import About from './About';
+import Contact from './Contact';
 import Home from './Home';
-
-import ProtectedRoute from './components/ProtectedRoute';
-import { useState } from 'react';
-
 
 const App = () => {
 
-    const [loginStatus, setLoginStatus] = useState(0)
+    const [loginStatus, setLoginStatus] = useState(1)
     return (
         <Routes>
 
@@ -58,6 +59,12 @@ const App = () => {
             <Route path='/Home' element={
                 <ProtectedRoute loggedIn={loginStatus}>
                     <Home />
+                </ProtectedRoute>
+            } />
+
+            <Route path='/Exam' element={
+                <ProtectedRoute loggedIn={loginStatus}>
+                    <Exam />
                 </ProtectedRoute>
             } />
 

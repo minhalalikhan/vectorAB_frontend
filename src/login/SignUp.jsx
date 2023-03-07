@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function SignUp({ setLoginSatus }) {
+function SignUp({ setLoginStatus }) {
 
 
     const [values, setValues] = useState({
@@ -126,10 +126,11 @@ function SignUp({ setLoginSatus }) {
 
 
                 setsignup(1)
-                setLoginSatus(1)
+                setLoginStatus(1)
+
                 setTimeout(() => {
                     history('/Home')
-                }, 2000)
+                }, 4000)
 
             }
             else {
