@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Select from 'react-select';
@@ -7,16 +8,11 @@ import Select from 'react-select';
 
 const Home = () => {
 
-  const exams_list = ['JEE', 'CUET', 'NEET', 'UPSEE'];
 
-  const subject_list = [{ value: 'English', label: 'English' }, { value: 'Hindi', label: 'Hindi' },
-  { value: 'Math', label: 'Math' }, { value: 'History', label: 'History' },
-  { value: 'Geography', label: 'Geography' },
-  { value: 'Politcs', label: 'Politcs' },
-  { value: 'Foreign Policy', label: 'Foreign Policy' },
-  { value: 'Technology', label: 'Technology' }];
-
+  const [subject_list, setSubject_list] = useState([])
+  const [exams_list, setexams_list] = useState([])
   const navigate = useNavigate()
+
   const [examData, setExamData] = useState({ select_exam: '', difficulty: '' })
   const [showSubject, setShowSubject] = useState(0)
   const [subjects, setSubjects] = useState([])
@@ -44,8 +40,39 @@ const Home = () => {
     }
   }
 
+  useEffect(() => {
+    console.log("getting exams")
+    const fetchData = async () => {
+      const getexamlist = await axios.get("http://localhost:3002/vectorab-api/get-courses")
+      if (getexamlist.status === 200)
+        setexams_list(getexamlist.data.courses)
+    }
+
+    fetchData()
+  }, [])
+
+  useEffect(() => {
 
 
+    const fetchData = async () => {
+      if (examData.select_exam !== '') {
+        console.log("getting subjects")
+        try {
+          const getSubjectlist = await axios.post("http://localhost:3002/vectorab-api/get-subjects", { course: examData.select_exam })
+
+          if (getSubjectlist.status === 200)
+            setSubject_list(getSubjectlist.data.subjects)
+
+        }
+        catch (err) {
+          console.log(err)
+        }
+      }
+
+    }
+
+    fetchData()
+  }, [examData.select_exam])
 
   return (
     <>
